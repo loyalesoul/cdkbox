@@ -1,8 +1,8 @@
 from aws_cdk import (
-    # Duration,
     Stack,
     aws_s3 as s3,
     RemovalPolicy,
+    aws_sqs as sqs,
 )
 from constructs import Construct
 
@@ -18,3 +18,7 @@ class HelloCdkStack(Stack):
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True,
         )
+
+        queue = sqs.Queue(self, "MyQueue", encryption=sqs.QueueEncryption.KMS_MANAGED)
+
+
