@@ -5,4 +5,4 @@
       rev: stable
       hooks:
         - id: black
-          language_version: python3.9
+          language_version: python3.8

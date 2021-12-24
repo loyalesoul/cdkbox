@@ -1,4 +1,4 @@
 [tool.black]
-py39 = true
+py38 = true
 include = ["*.py"]
 exclude = [".venv", ".git"]
