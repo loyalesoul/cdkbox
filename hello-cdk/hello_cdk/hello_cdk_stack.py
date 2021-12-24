@@ -19,6 +19,4 @@ class HelloCdkStack(Stack):
             auto_delete_objects=True,
         )
 
-        queue = sqs.Queue(self, "MyQueue", encryption=sqs.QueueEncryption.KMS_MANAGED)
-
-
+        queue = sqs.Queue(self, "TheQueue", encryption=sqs.QueueEncryption.KMS_MANAGED)
